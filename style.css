@@ -1,0 +1,126 @@
+/* Importando fonte do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* Estilo básico */
+body {
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    margin: 0;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+/* Título */
+h1 {
+    color: #004AAD;
+    font-size: 2.8em;
+    margin: 25px 0 10px 0;
+    font-weight: 700;
+    text-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Subtítulo */
+p {
+    font-size: 1.3em;
+    margin-bottom: 35px;
+    font-weight: 300;
+    color: #444;
+}
+
+/* Tabela */
+table {
+    width: 90%;
+    max-width: 900px;
+    margin: 0 auto 40px auto;
+    border-collapse: collapse;
+    border-radius: 12px;
+    overflow: hidden;
+    background-color: #fff;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+/* Cabeçalho */
+th {
+    background: linear-gradient(135deg, #FFFC00, #FFD700);
+    color: #004AAD;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 1px;
+    font-size: 1.05em;
+    padding: 16px;
+    border: none;
+}
+
+/* Células */
+td {
+    padding: 14px 16px;
+    border: 1px solid #eee;
+    font-size: 1em;
+    text-align: center;
+    color: #333;
+}
+
+/* Alternância de linhas */
+tr:nth-child(odd) td {
+    background-color: #fafafa;
+}
+
+/* Hover */
+tr:hover td {
+    background-color: #e8f3ff;
+}
+
+/* Links */
+a {
+    text-decoration: none;
+    color: #004AAD;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+a:hover {
+    color: #fff;
+    background-color: #004AAD;
+    padding: 4px 8px;
+    border-radius: 6px;
+}
+
+/* Rodapé */
+footer {
+    margin-top: 40px;
+    font-size: 0.95em;
+    color: #666;
+    padding: 15px 0;
+}
+
+/* --- ESTILO PARA DIVISÃO DE GRUPOS (OPÇÃO 1) --- */
+
+/* Estiliza a célula da Unidade Temática (Esporte, Ginástica, etc.) */
+td[rowspan] {
+    background-color: #e8f3ff; /* Fundo azul claro para destaque */
+    color: #004AAD;
+    font-weight: 700;
+    font-size: 1.1em;
+    vertical-align: middle; /* Garante que o texto fique no meio */
+}
+
+/* Adiciona uma borda superior mais grossa na primeira linha de cada grupo */
+td[rowspan],
+td[rowspan] + td {
+    border-top: 3px solid #004AAD;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    h1 { font-size: 2.2em; }
+    p { font-size: 1.1em; }
+    th, td { padding: 10px; font-size: 0.95em; }
+    table { width: 100%; }
+}
+
+@media (max-width: 480px) {
+    h1 { font-size: 1.8em; }
+    p { font-size: 1em; }
+    th, td { padding: 8px; font-size: 0.85em; }
+    table { box-shadow: none; }
+}
