@@ -6,7 +6,7 @@ body {
     font-family: 'Roboto', sans-serif;
     text-align: center;
     margin: 0;
-    background-color: #f4f4f9;
+    background: linear-gradient(135deg, #f4f4f9 0%, #eef3ff 100%);
     color: #333;
 }
 
@@ -14,134 +14,146 @@ body {
 h1 {
     color: #004AAD;
     font-size: 3em;
-    margin: 20px 0;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 30px 0 10px 0;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 
 /* Estilo do parágrafo */
 p {
-    font-size: 1.5em;
-    margin-bottom: 30px;
+    font-size: 1.4em;
+    margin-bottom: 40px;
     font-weight: 300;
+    color: #444;
 }
 
 /* Estilo da tabela */
 table {
-    width: 90%; /* Ajusta a largura da tabela para ser responsiva */
-    max-width: 800px;
-    margin: 0 auto;
+    width: 90%;
+    max-width: 900px;
+    margin: 0 auto 50px auto;
     border-collapse: collapse;
-    border-radius: 10px;
-    overflow: hidden; /* Para aplicar o border-radius */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    transition: transform 0.3s ease-in-out;
 }
 
-/* Estilo das células da tabela */
-th, td {
-    padding: 15px;
-    border: 1px solid #ddd;
-    text-align: center;
-    font-size: 1.2em;
+table:hover {
+    transform: scale(1.01);
 }
 
-/* Estilo do cabeçalho da tabela */
+/* Cabeçalho da tabela */
 th {
-    background-color: #FFFC00;
+    background: linear-gradient(135deg, #FFFC00, #FFD700);
     color: #004AAD;
     text-transform: uppercase;
-    font-weight: bold;
+    font-weight: 700;
     letter-spacing: 1px;
+    font-size: 1.1em;
+    padding: 18px;
 }
 
-/* Estilo das linhas ímpares da tabela */
-tr:nth-child(odd) {
+/* Células */
+td {
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+    font-size: 1.1em;
+    background-color: #fff;
+}
+
+/* Linhas alternadas */
+tr:nth-child(odd) td {
     background-color: #f9f9f9;
 }
 
-/* Efeito de hover nas linhas da tabela */
-tr:hover {
-    background-color: #e1f0ff; /* Cor de fundo ao passar o mouse */
+/* Hover nas linhas */
+tr:hover td {
+    background-color: #e8f3ff;
 }
 
-/* Estilo dos links */
+/* Links */
 a {
     text-decoration: none;
     color: #004AAD;
-    font-weight: bold;
-    transition: color 0.3s, transform 0.3s;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    display: inline-block;
+    padding: 6px 10px;
+    border-radius: 6px;
 }
 
-/* Efeito de hover nos links */
 a:hover {
-    text-decoration: underline;
-    color: #FFFC00;
-    transform: scale(1.05);
+    text-decoration: none;
+    color: #fff;
+    background-color: #004AAD;
+    transform: scale(1.07);
 }
 
-/* Efeito de foco nos links */
+/* Efeito de foco */
 a:focus {
     outline: none;
-    box-shadow: 0 0 5px #FFFC00, 0 0 10px #004AAD;
+    box-shadow: 0 0 6px #FFFC00, 0 0 12px #004AAD;
 }
 
-/* Estilo do rodapé */
+/* Rodapé */
 footer {
     margin-top: 40px;
-    font-size: 0.9em;
+    font-size: 0.95em;
     color: #666;
+    padding: 15px 0;
 }
 
-/* Estilo responsivo */
+/* RESPONSIVIDADE */
+
+/* Tablets */
 @media (max-width: 768px) {
     h1 {
-        font-size: 2.5em; /* Reduz o tamanho do título em telas menores */
+        font-size: 2.5em;
     }
-
     p {
-        font-size: 1.2em; /* Reduz o tamanho do parágrafo */
+        font-size: 1.2em;
     }
-
     th, td {
-        padding: 10px; /* Reduz o padding das células */
-        font-size: 1em; /* Reduz o tamanho da fonte nas células */
+        padding: 12px;
+        font-size: 1em;
     }
-
     table {
-        width: 100%; /* Ajusta a tabela para ocupar 100% em telas menores */
+        width: 95%;
     }
 }
 
+/* Celulares */
 @media (max-width: 480px) {
     h1 {
-        font-size: 2em; /* Título ainda menor para smartphones */
+        font-size: 2em;
     }
-
     p {
-        font-size: 1em; /* Tamanho do parágrafo reduzido para smartphones */
+        font-size: 1em;
     }
-
-    th, td {
-        padding: 8px; /* Menos padding para celulares */
-        font-size: 0.9em; /* Tamanho da fonte ainda menor */
+    table {
+        box-shadow: none;
     }
-
-    /* Estilo das linhas da tabela para melhor leitura */
     tr {
-        display: block; /* Faz cada linha da tabela ser um bloco */
-        margin-bottom: 15px; /* Espaço entre linhas */
+        display: block;
+        margin-bottom: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        overflow: hidden;
     }
-
     td {
-        display: flex; /* Flexbox para alinhar conteúdo */
-        justify-content: space-between; /* Espaço entre o conteúdo das células */
-        padding: 10px; /* Padding reduzido */
+        display: flex;
+        justify-content: space-between;
+        padding: 12px;
+        border: none;
+        font-size: 0.95em;
     }
-
     th {
-        display: none; /* Esconde os cabeçalhos para uma visualização mais limpa */
+        display: none;
     }
-
     a {
-        font-size: 0.9em; /* Tamanho dos links ajustado */
+        font-size: 0.95em;
     }
 }
